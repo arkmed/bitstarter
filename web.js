@@ -3,12 +3,7 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-    fs.readFile('./Index.html', function read(err, data)){
-	if(err){
-	    throw err;
-	}
-
-    response.send(data);
+  response.send('Hello World!');
 });
 
 var port = process.env.PORT || 5000;
